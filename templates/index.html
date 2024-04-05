@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+        <!-- Other meta tags and title -->
+       <!-- <link rel="stylesheet" href="style.css">-->
+       <style>
+        body {
+    background-color: #f8f9fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 30px;
+    border: 2px solid #3498db;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    background: linear-gradient(to right, #fc4a1a, #f7b733);
+    color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+form {
+    margin-top: 20px;
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin-bottom: 15px;
+}
+
+input[type="file"] {
+    border: 2px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+    width: 80%;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #28a745;
+    color: #fff;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #218838;
+}
+.form-container {
+        margin-bottom: 20px; /* Adjust the margin-bottom value as needed */
+    }
+
+    label {
+        display: block; /* Make the label a block-level element to separate it from the button */
+        margin-bottom: 10px; /* Add margin between label and input */
+    }
+
+       </style>
+        <script src="{{ url_for('static', filename='script.js') }}"></script> <!-- Include if you have JavaScript code -->
+ 
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF OCR with Flask</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>PDF OCR with Flask</h1>
+        <form method="POST" enctype="multipart/form-data">
+            <label for="file">Choose a PDF file:</label>
+            <input type="file" name="file" id="file" accept=".pdf">
+            <p>Next Click On the Upload</p>
+            <button type="submit">Upload and OCR</button>
+        </form>
+    </div>
+</body>
+
+</html>
